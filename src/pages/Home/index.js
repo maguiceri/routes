@@ -12,8 +12,7 @@ function Home(){
             <Link className="link" to="/market"><i className="icon" class="fas fa-flag"></i><p className="text">Bolivia</p></Link>
             <Link className="link" to="/market"><i className="icon" class="fas fa-flag"></i><p className="text">Peru</p></Link>
             <Link className="link" to="/market"><i className="icon" class="fas fa-flag"></i><p className="text">Mexico</p></Link>
-            <Link className="link" to="/market"><i className="icon" class="fas fa-flag"></i><p className="text">Chile</p></Link>
-        
+            <Link className="link" to="/market"><i className="icon" class="fas fa-flag"></i><p className="text">Chile</p></Link>    
         </div>
        
     )

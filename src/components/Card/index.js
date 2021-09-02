@@ -4,8 +4,10 @@ import "./styles.scss"
 function Card(props){
     return(
         <div className="card">
-            <img className="img" src={props.name.thumbnail}></img>
-            <p>{props.name.price}</p>
+            <p>{props.item.title}</p>
+            <img className="img" src={props.item.thumbnail}></img>
+            <p>{props.item.price}</p>
+
         </div>
     )
 }

@@ -3,7 +3,7 @@ import axios from 'axios';
 import Card from '../Card';
 import "./styles.scss";
 
-function Carrousel (){
+function Carrousel (props){
 const [items, setItems] = useState([])
 
         async function fetchData(){
@@ -18,12 +18,13 @@ const [items, setItems] = useState([])
         } , [])
 
     return(
-        <div className="carrousel">
-            {items.map((name,key)=>
-            {
-                return(<Card name={name} key={key}/>)
-            })}
-        </div>
+        <>
+        {items.filter((item)=>{
+        return item.title.toLowerCase().includes(props.inputValue.toLowerCase())
+      }).map((item, key)=>{
+        return <Card item={item} key={item.id? item.id : key}/>
+      })}
+        </>
     )
 }
 

@@ -3,11 +3,16 @@ import Navbar from "../../components/Navbar"
 import Carrousel from "../../components/Carrousel"
 
 function Market(){
+const [inputValue, setInputValue] = useState('')
+
+    function handleCallBack(inputValue){
+        setInputValue(inputValue)
+    }
   
     return(
         <>
-        <Navbar/>
-        <Carrousel/>
+        <Navbar handleCallBack={handleCallBack}/>
+        <Carrousel inputValue={inputValue}/>
         </>
     )
 }
